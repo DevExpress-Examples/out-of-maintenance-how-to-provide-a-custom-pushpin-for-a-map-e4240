@@ -1,0 +1,34 @@
+﻿<Window x:Class="MapShape_Template.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxm="http://schemas.devexpress.com/winfx/2008/xaml/map"
+        Title="MainWindow" Height="350" Width="525" >
+    <Window.Resources>
+        <DataTemplate x:Key="pushpin">
+            <StackPanel ToolTipService.ToolTip="{Binding Path=MapItem.Information}" Margin="-30 -60" >
+                <Image  Source="MyPushpin.png"  />
+                <TextBlock 
+                    Margin="6"
+                    Foreground="Blue"
+                    Text="{Binding Path=MapItem.Text}" />
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <dxm:MapControl ZoomLevel="5" CenterPoint="41.88,-87.63" >
+            <dxm:ImageTilesLayer>
+                <dxm:ImageTilesLayer.DataProvider>
+                    <dxm:OpenStreetMapDataProvider Kind="Road" />
+                </dxm:ImageTilesLayer.DataProvider>
+            </dxm:ImageTilesLayer>
+            <dxm:VectorLayer>
+                <dxm:VectorLayer.Items>
+                    <dxm:MapPushpin  Location="41.88,-87.63" 
+                                     Text="Chicago" 
+                                     Information="Test Chaicago Information"
+                                     Template="{StaticResource pushpin}" />
+                </dxm:VectorLayer.Items>
+            </dxm:VectorLayer>
+        </dxm:MapControl>
+    </Grid>
+</Window>
