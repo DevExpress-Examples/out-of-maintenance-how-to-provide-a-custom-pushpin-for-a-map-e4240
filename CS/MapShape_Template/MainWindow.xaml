@@ -6,7 +6,7 @@
     <Window.Resources>
         <DataTemplate x:Key="pushpin">
             <StackPanel ToolTipService.ToolTip="{Binding Path=MapItem.Information}" Margin="-30 -60" >
-                <Image  Source="MyPushpin.png"  />
+                <Image Source="MyPushpin.png" />
                 <TextBlock 
                     Margin="6"
                     Foreground="Blue"
@@ -18,7 +18,7 @@
         <dxm:MapControl ZoomLevel="5" CenterPoint="41.88,-87.63" >
             <dxm:ImageTilesLayer>
                 <dxm:ImageTilesLayer.DataProvider>
-                    <dxm:OpenStreetMapDataProvider Kind="Road" />
+                    <dxm:BingMapDataProvider />
                 </dxm:ImageTilesLayer.DataProvider>
             </dxm:ImageTilesLayer>
             <dxm:VectorLayer>
