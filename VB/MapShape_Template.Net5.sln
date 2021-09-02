@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2012
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MapShape_Template", "MapShape_Template\MapShape_Template.vbproj", "{7DC95A14-509D-4519-96B3-4889601DD4B4}"
+# Visual Studio 16
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MapShape_Template", "MapShape_Template\MapShape_Template.Net5.vbproj", "{7DC95A14-509D-4519-96B3-4889601DD4B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
